@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+:root {
+  font-size: 16px;
+}
+
 @font-face {
     font-family: 'Open Sans';
     src: url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff');
@@ -37,13 +41,15 @@ body {
 .header {
     position: relative;
     z-index: 1;
-    padding-top: 28px;
-    padding-bottom: 126px;
-    background-image: url('https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg');
+    padding-top: 1.75rem;
+    padding-bottom: 7.875rem;
+    background-image: url("../img/banner-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     color: #fff;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header::after {
@@ -58,10 +64,10 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-   margin: 0 auto;
-    padding-left: 15px;
-  padding-right: 15px;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 0.937rem;
+  padding-right: 0.937rem;
 }
 
 .header-logo-nav {
@@ -72,7 +78,7 @@ body {
 }
 
 .header-logo {
-    max-width: 180px;
+    max-width: 11.25rem;
 }
 
 .header-logo-link {
@@ -105,7 +111,7 @@ body {
 
 
 .header-text {
-    max-width: 700px;
+    max-width: 43.75rem;
     margin: 0 auto;
     margin-top: 100px;
 }
@@ -124,7 +130,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 65px;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     
 }
@@ -133,7 +139,7 @@ body {
 }
 
 .main {
-  max-width: 778px;
+  max-width: 48.43rem;
 }
 
 
@@ -141,15 +147,16 @@ body {
 
 .containers_trends {
   display: flex;
- margin-top: 36px;
- 
+  margin-top: 36px;
+   
 }
 .products_title,
 .trends_title {
+ 
   text-align: center;
   text-decoration: none;
- text-transform: uppercase;
-  color: 0f0d0e;
+  text-transform: uppercase;
+  color: #0f0d0e;
 }
 
 .trends_title_link {
@@ -160,7 +167,7 @@ body {
 .trends_all_news {
    display: flex;
    list-style: none;
-  text-transform: uppercase;
+   text-transform: uppercase;
   /*flex-direction: column;*/
   /*align-items: stretch;*/
 }
@@ -171,7 +178,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
-line-height: 24px;
+  line-height: 24px;
 }
 
 .container_product,
@@ -186,6 +193,8 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
 margin-right: 2px;
+margin-left: auto;
+margin-right: auto;
 }
 
 
@@ -195,6 +204,8 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
 margin-right: 2px;
+margin-left: auto;
+margin-right: auto;
   }
 
 
@@ -205,6 +216,8 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
 margin-right: 2px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .lemon {
@@ -212,18 +225,46 @@ background-image: url("../img/trend4.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
+margin-left: auto;
+margin-right: auto;
 }
 
 
+@media (max-width: 640px) {
+  .trend-container {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .containers_trends {
+  flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .trend-container {
+    width: 50%;
+  }
+  .containers_trends {
+    flex-wrap: wrap;
+  }
+}
+
 .trend-container {
-    width: calc(100%/4);
     max-height: 310px;
     border: 1px solid #84794f;
     }
 
+@media (min-width: 1201px){
+  .trend-container {
+    max-width: calc(100%/4);
+    
+  }
+}
+
+
 .trend_title {
-  color: #ffffff;
-  font-size: 20px;
+color: #ffffff;
+font-size: 20px;
  }
 
 /*trens end */
@@ -232,6 +273,7 @@ background-position: center center;
 .article {
     display: flex;
     align-items: flex-start;
+    
 }
 
 .article:nth-child(n + 2) {
@@ -247,11 +289,26 @@ background-position: center center;
 .article-img {
     max-width: 380px;
     margin-right: 30px;
+    
 }
+
 
 .article-text {
     max-width: 370px;
 }
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .article-img {
+    order: 1;
+  }
+  .article-text {
+    order: 2;
+  }
+.article {
+  flex-wrap: wrap;
+}
+}
+
 
 .trend_title:hover,
 .products_title_link:hover,
@@ -336,7 +393,7 @@ background-position: center center;
   text-align: center;
   position: relative;
   text-transform: uppercase;
-  ;
+  
 }
 /* полоска под постом */
 
@@ -398,7 +455,7 @@ background-position: center center;
      outline: none;
   
 }
-.input-place{
+.input-place {
    margin-top: 20px;
     width: 100%;
     padding: 17px 52px 17px 18px;
@@ -513,9 +570,9 @@ background-position: center center;
   /*gap: 17px;*/
    gap: 14px;
  list-style-type: none; 
-  
-  
+   
   }
+
   .list-theme-item {
    display: flex;
   gap: 5px;
@@ -551,10 +608,7 @@ background-position: center center;
   
 }
 
-.container_product {
-    max-width: calc(100%/3);
-    
-}
+
 
 .product__footer {
   display: flex;
@@ -607,6 +661,53 @@ background-position: center center;
   color: #ffffff;
 }
 
+@media (min-width: 1201px) {
+
+ .container_product {
+  flex-wrap: wrap;
+  max-width: calc(100%/3);
+
+ } 
+.container_product:nth-child(3) {
+ margin-right: 216px;
+}
+
+.container_product:nth-child(1) {
+ margin-left: 216px;
+ margin-right: 50px;
+}
+
+.container_product:nth-child(2) {
+  margin-right: 50px;
+}
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .container_product {
+    width: 50%;
+  }
+
+  .products_list  {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .products_list  {
+    flex-wrap: wrap;
+  }
+  .container_product {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 /*footer*/
 
@@ -650,11 +751,12 @@ background-position: center center;
 .socials-link {
 	display: block;
 	padding: 4px;
-		width: 15px;
+	width: 15px;
 	height: 24px;
 	background-repeat: no-repeat;
 	background-size: 20px;
-		background-position: center;
+	background-position: center;
+ 
 }
 
 .socials-link-facebook {
@@ -692,7 +794,7 @@ background-position: center center;
   /*color:#999999;*/
   font-family: open-sans-b, sans-serif;
   font-size: 12px;
-  text-align: center
+  text-align: center;
   display: block;
   margin-top: 66px;
 }
@@ -714,6 +816,4 @@ background-position: center center;
     color: #999999;
   text-decoration: none;
 }
-
-
 
