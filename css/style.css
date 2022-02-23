@@ -78,17 +78,23 @@ body {
 }
 
 .header-logo {
-    max-width: 11.25rem;
+  max-width: 180px;
 }
 
 .header-logo-link {
-    display: block;
+  display: block;
 }
 
 .header-logo-img {
-    max-width: 100%;
+  width: 100%;
 }
 
+@media (max-width: 640px) {
+.header-logo-img {
+  display: none;
+}
+  
+}
 .nav-list {
     display: flex;
     list-style: none;
@@ -108,6 +114,124 @@ body {
 .nav-list-link:hover {
    text-decoration: underline;
 }
+
+
+/* навигация */
+
+@media (min-width: 641px) and (max-width: 1200px), (max-width: 640px) {
+ 
+  .nav {
+    position: relative;
+    width: auto;
+    min-height: 51px;
+    /*background-color: #826550;*/
+    /*background-color: #000000;*/
+   
+  }
+  .main_nav__toggle {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 50px;
+    /*background-color: #6a4d38;*/
+    cursor: pointer;
+    border: none;
+  
+  }
+
+    &:hover,
+    &:active {
+      background-color: #624530;
+    }
+  
+    .main_nav_opened .main_nav__toggle {
+      top: 0;
+      right: auto;
+      left: 0;
+    
+    }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 18px;
+        width: 36px;
+        height: 2px;
+        background-color: #ffffff;
+      }
+    
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+    
+      &::after {
+        transform: rotate(-45deg);
+      }
+    
+      &:active::before,
+      &:active::after {
+        background-color: fade(#ffffff, 30%);
+      }
+    
+      .nav-list {
+        position: relative;
+        display: block;
+        padding: 12px 21px;
+        padding-bottom: 13px;
+        font-size: 18px;
+        line-height: 24px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: #826550;
+        border-top: 1px solid #886e5b;
+        border-bottom: 1px solid #71543f;
+      }
+
+      .nav-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      
+      .nav-list a {
+        color: #ffffff;
+      }
+
+      .main_nav_closed .main_nav__toggle::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 17px;
+        width: 36px;
+        height: 2px;
+        background-color: #ffffff;
+        box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+      }
+      
+      .main_nav_closed .main_nav__toggle:active::before {
+        background-color: fade(#ffffff, 30%);
+        box-shadow:
+          0 8px 0 0 fade(#ffffff, 30%),
+          0 16px 0 0 fade(#ffffff, 30%);
+      }
+      
+      .main_nav_closed .nav-list-item {
+        display: none;
+      }
+      
+      
+      
+}
+
+
 
 
 .header-text {
@@ -708,6 +832,12 @@ font-size: 20px;
     flex-wrap: wrap;
   }
 }
+
+.product__body {
+  border: 2px solid #d3c59d;
+}
+
+
 
 /*footer*/
 
