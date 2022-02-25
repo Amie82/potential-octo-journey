@@ -838,6 +838,11 @@ margin-right: 50px;
 
 .product__body {
 border: 2px solid #d3c59d;
+position: relative;
+bottom: 40px;
+right: 20px;
+max-width: 340px;
+
 }
 
 .product_news_link {
@@ -848,11 +853,22 @@ border: 2px solid #d3c59d;
 
 .product__description {
   font-size: 15px;
+  
 }
 .product__title {
   font-size: 1.25rem;
 }
 
+.product__content {
+padding-top: 55px;
+padding-left: 18px;
+padding-right: 18px;
+}
+
+.product__footer {
+padding-left: 18px;
+padding-right: 18px;
+}
 
 /*footer*/
 
