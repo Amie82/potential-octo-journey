@@ -74,6 +74,7 @@ padding-right: 0.937rem;
 align-items: center;
 display: flex;
 justify-content: space-between;
+flex-grow: 1;
   
 }
 
@@ -98,6 +99,7 @@ display: none;
 .nav-list {
   display: flex;
   list-style: none;
+  
 }
 
 .nav-list-item:nth-child(n + 2) {
@@ -119,65 +121,44 @@ display: none;
 /* навигация */
 
 @media (min-width: 641px) and (max-width: 1200px), (max-width: 640px) {
-.nav {
-  position: relative;
-  width: auto;
-  min-height: 51px;
-  /*background-color: #826550;*/
-  /*background-color: #000000;*/
- 
-}
-.main_nav__toggle {
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  display: block;
-  width: 70px;
-  height: 50px;
-  /*background-color: #6a4d38;*/
-  cursor: pointer;
-  border: none;
-
-}
-
-  &:hover,
-  &:active {
+  .nav {
+    position: relative;
+    width: auto;
+    min-height: 51px;
+    
+  }
+  .main_nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+  .main_nav__toggle:hover,
+  .main_nav__toggle:active {
     background-color: #624530;
   }
-
-  .main_nav_opened .main_nav__toggle {
-    top: 0;
-    right: auto;
-    left: 0;
-  
+  .main_nav_closed .main_nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
   }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 24px;
-      left: 18px;
-      width: 36px;
-      height: 2px;
-      background-color: #ffffff;
-    }
+  .main_nav_closed .main_nav__toggle:active::before {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+  }
   
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
   
-    &::after {
-      transform: rotate(-45deg);
-    }
-  
-    &:active::before,
-    &:active::after {
-      background-color: fade(#ffffff, 30%);
-    }
   
     .nav-list {
       position: relative;
