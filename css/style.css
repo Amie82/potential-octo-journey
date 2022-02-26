@@ -26,6 +26,7 @@ font-size: 16px;
 
 body {
   font-family: 'Open Sans', sans-serif;
+  overflow-x:hidden;
 }
 
 .visually-hidden {
@@ -298,7 +299,7 @@ background-size: cover;
 background-position: center center;
 margin-right: 2px;
 margin-left: auto;
-margin-right: auto;
+
 }
 
 
@@ -309,7 +310,7 @@ background-size: cover;
 background-position: center center;
 margin-right: 2px;
 margin-left: auto;
-margin-right: auto;
+
 }
 
 
@@ -321,7 +322,7 @@ background-size: cover;
 background-position: center center;
 margin-right: 2px;
 margin-left: auto;
-margin-right: auto;
+
 }
 
 .lemon {
@@ -330,14 +331,14 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center center;
 margin-left: auto;
-margin-right: auto;
+
 }
 
 
 @media (max-width: 640px) {
 .trend-container {
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
 }
 .containers_trends {
 flex-wrap: wrap;
@@ -346,7 +347,7 @@ flex-wrap: wrap;
 
 @media (min-width: 641px) and (max-width: 1200px) {
 .trend-container {
-  width: 50%;
+  max-width: calc(50%-2px);
 }
 .containers_trends {
   flex-wrap: wrap;
@@ -354,13 +355,14 @@ flex-wrap: wrap;
 }
 
 .trend-container {
-  max-height: 310px;
+  height: 320px;
   border: 1px solid #84794f;
+  
   }
 
 @media (min-width: 1201px){
 .trend-container {
-  max-width: calc(100%/4);
+  max-width: calc(25% - 2px);
   
 }
 }
