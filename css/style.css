@@ -139,9 +139,9 @@ display: none;
     cursor: pointer;
     border: none;
   }
-  .main_nav__toggle:hover,
+  /*.main_nav__toggle:hover,*/
   .main_nav__toggle:active {
-    background-color: #624530;
+    background-color: #ffffff;
   }
   .main_nav_closed .main_nav__toggle::before {
     content: "";
