@@ -283,17 +283,14 @@ margin-top: 56px;
 }
 
 
-/*
+
 .trend-container {
-position: absolute;
-bottom: 20px;
-left: 20px;
-right: 20px;
+padding: 1px 1px;
 border: 1px solid rgba(181, 159, 91, 0.6);
 z-index: 3;
 
 }
-*/
+
 
 
 
@@ -384,12 +381,14 @@ margin-left: auto;
 
   .container_trend {
   position: relative;
-  height: 320px;
+  min-height: 320px;
   max-width: calc(25% - 2px);
   display: flex;
+  padding: 20px;
   align-items: flex-end;
-    justify-content: space-between;
+  justify-content: space-between;
   z-index: 0;
+
 }
 }
 
