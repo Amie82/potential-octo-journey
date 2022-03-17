@@ -56,7 +56,7 @@
     <a class="trends_title_link" href="#">Сейчас в тренде </a>
       
     </h2>
-  <ul class="trends containers_trends">
+  <ul class="trends_list containers_trends">
     
       <li class="container_trend windowsill">
         <div class="trend-container">
@@ -384,7 +384,7 @@
     <a class="products_title_link" href="#">Наши изделия </a>
       
     </h2>
-  <ul class="products_list">
+  <ul class="products_list container">
     
       <li class="container_product pillow">
         
@@ -559,7 +559,7 @@
     <button class="popup-close" type="button">
       <span class="popup-close-text">Закрыть окно</span>
     </button>
-    <div class="popup-header">
+    <form class="popup-header">
       <h3 class="your_feedback section-title">ваш фидбек</h3>
       <div class="popup-text">
       </div>
@@ -567,7 +567,10 @@
         <label class="form-group">
           <span class="form-hint">Как часто вы заходите на сайт?</span>
           <select class="select">
-				<option>Почти каждый день</option>
+				<option class="value1 selected">Почти каждый день</option>
+        <option class="value2">Раз в несколько дней</option>
+        <option class="value3">Раз в несколько недель</option>
+        <option class="value4">Несколько раз в год</option>
           </select>
         </label>
       </div>
@@ -577,7 +580,7 @@
 
         <label class="radio-group">
           <input type="radio" class="radio" name="radio-group" checked>
-          <span class="#b59f5b">Да</span>
+          <span class="radio-group-text">Да</span>
         </label>
 
         <label class="radio-group">
@@ -590,7 +593,7 @@
        <div class="form-row">
         <label class="form-group">
           <span class="form-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-          <input type="text" class="field" placeholder="Может, больше рецептов?"required>
+          <textarea type="text" class="field" placeholder="Может, больше рецептов?"required></textarea>
         </label>
       </div>
       
