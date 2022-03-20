@@ -1062,6 +1062,10 @@ text-decoration: none;
 	padding: 12px 110px;
 	color: #ffffff;
   margin-top: 40px;
+  font-size: 14px;
+ line-height: 40px;
+
+font-weight: 700;
     
 
 	background-color: #b59f5b;
@@ -1126,9 +1130,10 @@ text-decoration: none;
   
   .field {
 	box-sizing: border-box;
-	width: 300px;
-  height: 100px;
-	border: 1px solid #dddddd;
+  width: 100%;
+	/*width: 276px;*/
+  height: 124px;
+	/*border: 1px solid #dddddd;*/
 	padding: 15px 20px;
   background-color: #f3f7f6;
 	font-family: inherit;
@@ -1138,10 +1143,34 @@ text-decoration: none;
 	text-align: center;
 }
 
- /* скрыть popup */
-.popup {
-  display: none;
+.your_feedback {
+font-size: 20px;
+line-height: 29px;
+color: #0f0d0e;
+font-weight: 700;
+font-family: "Open Sans";
 }
+
+.form-row .form-hint,
+.form-group .form-hint {
+  font-size: 13px;
+color: #000000;
+font-weight: 400;
+}
+
+.value1,
+.value2,
+.value3,
+.value4 {
+  font-size: 13px;
+color: #000000;
+font-weight: 400;
+font-family: "Open Sans";
+}
+ /* скрыть popup */
+/*.popup {
+  display: none;
+}*/
 
 @media (min-width: 1201px) {
 .main_nav__toggle {
