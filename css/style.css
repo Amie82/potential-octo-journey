@@ -1168,9 +1168,9 @@ font-weight: 400;
 font-family: "Open Sans";
 }
  /* скрыть popup */
-/*.popup {
+.popup {
   display: none;
-}*/
+}
 
 @media (min-width: 1201px) {
 .main_nav__toggle {
